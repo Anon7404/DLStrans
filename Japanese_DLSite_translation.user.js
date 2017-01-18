@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name           Japanese DLSite translation
 // @namespace      http://userscripts.org/users/23652
-// @description    Replaces Japanese text on DLSite
+// @description    Replaces Japanese interface text on DLSite
 // @include        http*://*.dlsite.com/*
 // @exclude        http*://*.dlsite.com/*eng*
 // @grant          none
 // @copyright      JoeSimmons
 // @version        1.1.4
 // @license        http://creativecommons.org/licenses/by-nc-nd/3.0/us/
-// @downloadURL    https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
-// @updateURL      https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
+// @downloadURL    https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
+// @updateURL      https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
 // ==/UserScript==
 (function () {
     'use strict';
