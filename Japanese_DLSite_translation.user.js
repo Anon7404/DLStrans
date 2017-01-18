@@ -6,7 +6,7 @@
 // @exclude        http*://*.dlsite.com/*eng*
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.1.4
+// @version        1.1.5
 // @license        http://creativecommons.org/licenses/by-nc-nd/3.0/us/
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
@@ -19,17 +19,6 @@
         NOTE: 
             You can use \\* to match actual asterisks instead of using it as a wildcard!
             The examples below show a wildcard in use and a regular asterisk replacement.
-
-            '/(?:^|\\W)word(?:\\W|$)/g' : 'word',
-            '/(?:^|\\s)word/g' : 'word',
-            '/(|\\s)word\\s/g' : 'word',
-            '/(\\W:|)word(:\\W|$)/g' : 'word',
-            '/\\bword\\b/g' : 'word',
-            '/\\bword/g' : 'word',
-            '/(:|^)word/g' : 'word',
-            '/(:|^)word(:|$)/g' : 'word',
-            '/(:|^)word(|| )(:|$)/g' : 'word ',
-
     */
 
     var words = {
