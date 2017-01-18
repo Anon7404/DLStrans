@@ -1,1 +1,1 @@
-# Japanese-DLSite-translation
+Replaces Japanese text on DLSite.
