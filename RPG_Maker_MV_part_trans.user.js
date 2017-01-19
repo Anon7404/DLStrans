@@ -5,7 +5,7 @@
 // @include        file://localhost/*/*.json
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.0.1
+// @version        1.0.1b
 // @project page   https://github.com/Anon7404/DLStrans/tree/MV-partial-translation
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
@@ -123,7 +123,7 @@
         '"ファイル"' : '"File"',
 // Display when there are multiple members
 // partyName
-        '"%1たち"' : '"%1s's Party"',
+        '"%1たち"' : '"%1s\'s Party"',
 // Basic Battle Messages
 // emerge
         '"%1が出現！"' : '"%1s emerged!"',
@@ -201,14 +201,14 @@
         '"%1が%2をかばった！"' : '"%1s protected against %2s damage!"',
 // Status Increase/Decrease
 // buffAdd
-        '"%1の%2が上がった！"' : '"%1s's %2s increased!"',
+        '"%1の%2が上がった！"' : '"%1s\'s %2s increased!"',
 // debuffAdd
-        '"%1の%2が下がった！"' : '"%1s's %2s decreased!"',
+        '"%1の%2が下がった！"' : '"%1s\'s %2s decreased!"',
 // buffRemove
-        '"%1の%2が元に戻った！"' : '"%1s's %2s decreased!"',
+        '"%1の%2が元に戻った！"' : '"%1s\'s %2s decreased!"',
 // Skill and Item Failure
 // actionFailure
-"%1には効かなかった！"%1 failed to act!
+"%1には効かなかった！"' : '"%1 failed to act!"',
 // Other
 // alwaysDash
         '"常時ダッシュ"' : '"Always Run"',
