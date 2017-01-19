@@ -142,7 +142,7 @@
 // obtainExp
         '"%1 の%2を獲得！"' : '"%1s %2 were received!"',
 // obtainGold
-        '"お金を %1\\G 手に入れた！"' : '"%1s\\G were obtained!"',
+        '"お金を %1\\\\G 手に入れた！"' : '"%1s\\\\G were obtained!"',
 // obtainItem
         '"%1を手に入れた！"' : '"%1s was found!"',
 // levelUp
