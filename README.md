@@ -5,7 +5,7 @@
 
 ### How to use
 >
-1. Install script into browser.
+1. Install script to your browser.
 2. Go into "your_game\www\data" folder and backup all files.
 3. Open, for example, System.json in the browser.
 4. Copy text you've got.
