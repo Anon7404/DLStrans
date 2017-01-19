@@ -5,7 +5,7 @@
 // @include        file://localhost/*/*.json
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.0.1b
+// @version        1.0.2
 // @project page   https://github.com/Anon7404/DLStrans/tree/MV-partial-translation
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
@@ -52,7 +52,7 @@
         //'' : '',
 // skillTypes
         '"魔法"' : '"Magic"',
-        '"戦技"Skills
+        '"戦技"' : '"Skills"',
         '"パッシヴスキル"' : '"Passive skill"',
         '"バトルスキル"' : '"Battle skill"',
         '"マジックスキル"' : '"Magic skill"',
@@ -72,7 +72,6 @@
         '"セーブ"' : '"Save"',
         '"ゲーム終了"' : '"Quit Game"',
         '"オプション"' : '"Option"',
-        '"武器"' : '"Weapon"',
         '"防具"' : '"Armor"',
         '"大事なもの"' : '"Key Items"',
         '"最強装備"' : '"Optimum"',
@@ -176,12 +175,6 @@
 // Results for Actions on Enemy
 // enemyDamage
         '"%1に %2 のダメージを与えた！"' : '"%1s took %2s damage!"',
-// enemyRecovery
-        '"%1の%2が %3 回復した！"' : '"%1s recovered %2s %3s!"',
-// enemyGain
-        '"%1の%2が %3 増えた！"' : '"%1s gained %2s %3s!"',
-// enemyLoss
-        '"%1の%2が %3 減った！"' : '"%1s lost %2s %3s!"',
 // enemyDrain
         '"%1の%2を %3 奪った！"' : '"%1s drained %2s %3s!"',
 // enemyNoDamage
@@ -208,7 +201,7 @@
         '"%1の%2が元に戻った！"' : '"%1s\'s %2s decreased!"',
 // Skill and Item Failure
 // actionFailure
-"%1には効かなかった！"' : '"%1 failed to act!"',
+        '"%1には効かなかった！"' : '"%1 failed to act!"',
 // Other
 // alwaysDash
         '"常時ダッシュ"' : '"Always Run"',
