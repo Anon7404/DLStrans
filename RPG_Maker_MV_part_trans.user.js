@@ -5,7 +5,7 @@
 // @include        file://localhost/*/*.json
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.0.2
+// @version        1.0.3
 // @project page   https://github.com/Anon7404/DLStrans/tree/MV-partial-translation
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
@@ -122,36 +122,36 @@
         '"ファイル"' : '"File"',
 // Display when there are multiple members
 // partyName
-        '"%1たち"' : '"%1s\'s Party"',
+        '"%1たち"' : '"%1\'s Party"',
 // Basic Battle Messages
 // emerge
-        '"%1が出現！"' : '"%1s emerged!"',
+        '"%1が出現！"' : '"%1 emerged!"',
 // preemptive
-        '"%1は先手を取った！"' : '"%1s got the upper hand!"',
+        '"%1は先手を取った！"' : '"%1 got the upper hand!"',
 // surprise
-        '"%1は不意をつかれた！"' : '"%1s was surprised!"',
+        '"%1は不意をつかれた！"' : '"%1 was surprised!"',
 // escapeStart
-        '"%1は逃げ出した！"' : '"%1s has started to escape!"',
+        '"%1は逃げ出した！"' : '"%1 has started to escape!"',
 // escapeFailure
         '"しかし逃げることはできなかった！"' : '"However, it was unable to escape!"',
 // Battle Ending Messages
 // victory
-        '"%1の勝利！"' : '"%1s was victorious!"',
+        '"%1の勝利！"' : '"%1 was victorious!"',
 // defeat
-        '"%1は戦いに敗れた。"' : '"%1s was defeated."',
+        '"%1は戦いに敗れた。"' : '"%1 was defeated."',
 // obtainExp
-        '"%1 の%2を獲得！"' : '"%1s %2 were received!"',
+        '"%1 の%2を獲得！"' : '"%1 %2 were received!"',
 // obtainGold
-        '"お金を %1\\\\G 手に入れた！"' : '"%1s\\\\G were obtained!"',
+        '"お金を %1\\\\G 手に入れた！"' : '"%1\\\\G were obtained!"',
 // obtainItem
-        '"%1を手に入れた！"' : '"%1s was found!"',
+        '"%1を手に入れた！"' : '"%1 was found!"',
 // levelUp
-        '"%1は%2 %3 に上がった！"' : '"%1s is now %2s %3s!"',
+        '"%1は%2 %3 に上がった！"' : '"%1 is now %2 %3!"',
 // obtainSkill
-        '"%1を覚えた！"' : '"%1s was learned!"',
+        '"%1を覚えた！"' : '"%1 was learned!"',
 // Item Use
 // useItem
-        '"%1は%2を使った！"' : '"%1s uses %2s!"',
+        '"%1は%2を使った！"' : '"%1 uses %2!"',
 // Critical Hit
 // criticalToActor
         '"痛恨の一撃！！"' : '"A painful blow!!"',
@@ -159,46 +159,46 @@
         '"会心の一撃！！"' : '"An excellent hit!!"',
 // Results for Actions on Actors
 // actorDamage
-        '"%1は %2 のダメージを受けた！"' : '"%1s took %2s damage!"',
+        '"%1は %2 のダメージを受けた！"' : '"%1 took %2 damage!"',
 // actorRecovery
-        '"%1の%2が %3 回復した！"' : '"%1s recovered %2s %3s"',
+        '"%1の%2が %3 回復した！"' : '"%1 recovered %2 %3"',
 // actorGain
-        '"%1の%2が %3 増えた！"' : '"%1s gained %2s %3s!"',
+        '"%1の%2が %3 増えた！"' : '"%1 gained %2 %3!"',
 // actorLoss
-        '"%1の%2が %3 減った！"' : '"%1s lost %2s %3s!"',
+        '"%1の%2が %3 減った！"' : '"%1 lost %2 %3!"',
 // actorDrain
-        '"%1は%2を %3 奪われた！"' : '"%1s drained %2s %3s!"',
+        '"%1は%2を %3 奪われた！"' : '"%1 drained %2 %3!"',
 // actorNoDamage
-        '"%1はダメージを受けていない！"' : '"%1s took no damage!"',
+        '"%1はダメージを受けていない！"' : '"%1 took no damage!"',
 // actorNoHit
-        '"ミス！　%1はダメージを受けていない！"' : '"Miss! %1s took no damage!"',
+        '"ミス！　%1はダメージを受けていない！"' : '"Miss! %1 took no damage!"',
 // Results for Actions on Enemy
 // enemyDamage
-        '"%1に %2 のダメージを与えた！"' : '"%1s took %2s damage!"',
+        '"%1に %2 のダメージを与えた！"' : '"%1 took %2 damage!"',
 // enemyDrain
-        '"%1の%2を %3 奪った！"' : '"%1s drained %2s %3s!"',
+        '"%1の%2を %3 奪った！"' : '"%1 drained %2 %3!"',
 // enemyNoDamage
-        '"%1にダメージを与えられない！"' : '"%1s took no damage!"',
+        '"%1にダメージを与えられない！"' : '"%1 took no damage!"',
 // enemyNoHit
-        '"ミス！　%1にダメージを与えられない！"' : '"Miss! %1s took no damage!"',
+        '"ミス！　%1にダメージを与えられない！"' : '"Miss! %1 took no damage!"',
 // Evasion/Reflection
 // evasion
-        '"%1は攻撃をかわした！"' : '"%1s dodged the attack!"',
+        '"%1は攻撃をかわした！"' : '"%1 dodged the attack!"',
 // magicEvasion
-        '"%1は魔法を打ち消した！"' : '"%1s canceled the magic!"',
+        '"%1は魔法を打ち消した！"' : '"%1 canceled the magic!"',
 // magicReflection
-        '"%1は魔法を跳ね返した！"' : '"%1s reflected the magic!"',
+        '"%1は魔法を跳ね返した！"' : '"%1 reflected the magic!"',
 // counterAttack
-        '"%1の反撃！"' : '"%1s countered!"',
+        '"%1の反撃！"' : '"%1 countered!"',
 // substitute
-        '"%1が%2をかばった！"' : '"%1s protected against %2s damage!"',
+        '"%1が%2をかばった！"' : '"%1 protected against %2 damage!"',
 // Status Increase/Decrease
 // buffAdd
-        '"%1の%2が上がった！"' : '"%1s\'s %2s increased!"',
+        '"%1の%2が上がった！"' : '"%1\'s %2 increased!"',
 // debuffAdd
-        '"%1の%2が下がった！"' : '"%1s\'s %2s decreased!"',
+        '"%1の%2が下がった！"' : '"%1\'s %2 decreased!"',
 // buffRemove
-        '"%1の%2が元に戻った！"' : '"%1s\'s %2s decreased!"',
+        '"%1の%2が元に戻った！"' : '"%1\'s %2 decreased!"',
 // Skill and Item Failure
 // actionFailure
         '"%1には効かなかった！"' : '"%1 failed to act!"',
