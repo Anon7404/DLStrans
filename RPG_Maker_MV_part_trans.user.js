@@ -5,7 +5,7 @@
 // @include        file://localhost/*/*.json
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.0.4
+// @version        1.1.0
 // @project page   https://github.com/Anon7404/DLStrans/tree/MV-partial-translation
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
@@ -476,13 +476,13 @@
         '"ＨＰとＭＰを完全に回復する。"' : '"Completely recovers HP and MP."',
         '"エリクサー"' : '"Elixir"',
    //other
-        '"マナポーション"' : '"Mana Potion',
-        '"ハイマナポーション"' : '"Hi-Mana Potion',
-        '"エクスポーション"' : '"X-Potion',
-        '"エクスマナポーション"' : '"X-Mana Potion',
+        '"マナポーション"' : '"Mana Potion"',
+        '"ハイマナポーション"' : '"Hi-Mana Potion"',
+        '"エクスポーション"' : '"X-Potion"',
+        '"エクスマナポーション"' : '"X-Mana Potion"',
         '"瞬間裁縫セット"' : '"Sewing Kit"',
         '"破れた衣服をすぐに元通りにできる"' : '"Repairs Torn Clothes."',
-        '"完全回復薬　HPとMPともに全回復"' : '"Complete Recovery Item\/Always Useable Can be used in combat, Fully recovers HP.',
+        '"完全回復薬　HPとMPともに全回復"' : '"Complete Recovery Item\/Always Useable Can be used in combat, Fully recovers HP."',
         //'' : '',
 // Translations for Skills file
    //original
