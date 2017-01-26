@@ -26,13 +26,13 @@
 
         // Syntax: 'Search word' : 'Replace word',
 // Automatic line separator, remove /* and */ for it to work
-        '"\,"' : '",\n"',
+/*        '"\,"' : '",\n"',
         '}\,{' : '},\n{',
         '"]\,"' : '"],\n"',
         '\,"description"\:"' : '\,\n"description"\:"',
         '\,"name"\:"' : '\,\n"name"\:"',
         '\,"message1"\:"' : '\,\n"message1"\:"',
-        //'' : '',
+*/        //'' : '',
 // Character names for Actors file
 // maps partially contain matches with this too,
 // so better to comment entries here before continuing with maps 
