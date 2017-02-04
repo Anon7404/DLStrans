@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js" lang>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>RPG MAKER MV Translator</title>
+<meta name="description" content>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"ef6ad74db5c2c8e1b05b6e2186390cd5",petok:"025d364ab1e078b4c001d3baaab6e587514a64df-1486231379-1800",zone:"gamestailer94.de",rocket:"0",apps:{"ga_key":{"ua":"UA-78467261-1","ga_bs":"2"},"abetterbrowser":{"ie":"10"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="stylesheet" href="RPG%20MAKER%20MV%20Translator_files/bootstra.css">
+<link rel="stylesheet" href="RPG%20MAKER%20MV%20Translator_files/bootstrb.css">
+<link rel="stylesheet" href="RPG%20MAKER%20MV%20Translator_files/main0000.css">
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-78467261-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+<h4 class="modal-title">Help</h4>
+</div>
+<div class="modal-body">
+<h2>Importent:</h2>
+<h3>Only Textboxes and Decisions on Maps ,Items (inc. Armor/Weapons), Skills and Enemies are supported at the moment</h3>
+<p></p>
+<p>How to Use with Maps:</p>
+<p>Select a Map File with the File Selector on the Top (The Map Files are in You Game Dir under data, called Map001.json and so on).</p>
+<p>Wait for the File to be Processed (may take some time, depending on your PC and the size of the File).</p>
+<p>On the Left is a List with Events, there ID and there Pages, if an Event or a Page of it has no Text it won´t show up.</p>
+<p>If you Select one of the Events you get the Main Text Table.</p>
+<p>Here you can see the Original Content of the Textfield and one Field to Change it.</p>
+<p>If you edit the New Field you NEED to click Somewhere else or press Enter to save the change.</p>
+<p>Once the Changes are saved the Row turns Green.</p>
+<p>How to Use with Items/Skills:</p>
+<p>Just upload it, and change Stuff.</p>
+<p>If you press the Download Button, obviously you Download the "New" Changed Version of the File, with the same Name as the Original one.</p>
+<p>If you Upload a new File without saving the old one first, the Changes will be lost, also if you reload the Page.</p>
+<p>If you Run into Problems you can Create a Ticket <a href="https://bitbucket.org/gamestailer94/rpgmakertranslator/issues">Here</a></p>
+</div>
+<div class="modal-footer">
+<button type="button" id="debug" class="btn btn-danger">Activate Debug</button>
+<button type="button" class="btn btn-primary" data-dismiss="modal">Got It!</button>
+</div>
+</div> 
+</div> 
+</div> 
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+<div class="container">
+<div class="row">
+<div class="text-center">
+<h1>RPG Maker MV Translation Tool</h1>
+<h6>Version 1.2.0</h6>
+</div>
+</div>
+<div class="row" id="file_control">
+<div class="col-sm-3">
+<div class="btn-group btn-group-justified">
+<a id="download" role="button" class="btn btn-primary">Download File</a>
+<a id="help" role="button" class="btn btn-info" data-toggle="modal" data-target="#helpModal">Help</a>
+</div>
+</div>
+<div class="col-sm-4" id="uploader">
+<input type="file" id="file" name="file">
+</div>
+</div>
+<div class="row hidden" id="maps">
+<div class="col-sm-3">
+<table class="table table-striped table-hover">
+<colgroup>
+<col width="10%">
+<col width="80%">
+<col width="10%">
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>Event</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody id="event_table">
+</tbody>
+</table>
+</div>
+<div class="col-sm-9">
+<table class="table table-striped table-bordered">
+<colgroup>
+<col width="5%">
+<col width="15%">
+<col width="40%">
+<col width="40%">
+</colgroup>
+<thead>
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Original</th>
+<th>New</th>
+</tr>
+</thead>
+<tbody id="text_table">
+</tbody>
+</table>
+</div>
+</div>
+<div class="row hidden" id="items">
+<table class="table table-bordered">
+<colgroup>
+<col width="12%">
+<col width="12%">
+<col width="12%">
+<col width="12%">
+<col width="12%">
+<col width="12%">
+<col width="12%">
+<col width="12%">
+</colgroup>
+<thead>
+<tr>
+<th>Org. Name</th>
+<th>Org. Description</th>
+<th>Org. Message 1</th>
+<th>Org. Message 2</th>
+<th>New Name</th>
+<th>New Description</th>
+<th>New Message 1</th>
+<th>New Message 2</th>
+</tr>
+</thead>
+<tbody id="items_table"></tbody>
+</table>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<textarea class="hidden" id="debug_data"></textarea>
+</div>
+</div>
+</div>
+<script src="RPG%20MAKER%20MV%20Translator_files/jquery00.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="RPG%20MAKER%20MV%20Translator_files/bootstra.js"></script>
+<script src="RPG%20MAKER%20MV%20Translator_files/FileSave.js"></script>
+<script src="RPG%20MAKER%20MV%20Translator_files/js000000.js"></script>
+<script src="RPG%20MAKER%20MV%20Translator_files/main0000.js"></script>
+</body>
+</html>
+
+<!-- This document saved from http://gamestailer94.de/translator/ -->

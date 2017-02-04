@@ -1,0 +1,311 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>How to use (using maps as example)</TITLE>
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000;  
+widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font- 
+size: 12pt; so-language: en-US }
+		P.cjk { font-family: "MS Mincho", "ＭＳ 明朝", monospace; font 
+-size: 12pt; so-language: ja-JP }
+		P.ctl { font-family: "Times New Roman", serif; font-size:  
+12pt; so-language: ar-SA }
+		A:link { color: #0000ff }
+	-->
+ body {
+    margin: 50;
+   }
+   h1 {
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0000ff" DIR="LTR" margin: 10;>
+<h2>How to use (using maps
+as example)</h2><br>
+1. Install script
+Princess_Lucia_full_auto_trans.user.jc<br>
+2. Backup &quot;data&quot;
+and &quot;js&quot; folders.<br>
+3. Open *.json file
+from data folder in browser and wait for the script to finish the
+work.<br>
+4. Open the same file
+using text editor (in my case Word).<br>
+5. Copy text from
+browser, paste into Word, save and close file in Word and browser.<br>
+6. Repeat with all
+other files.<br>
+7. Play.<br>
+<br>
+<h2>How to make your own
+translation file for RPG Maker MV</h2><br>
+<SPAN LANG="en-US">Hint:
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #ffff00">use
+this expression</SPAN></SPAN><SPAN LANG="en-US">[/code]</SPAN><br>
+<h3>a) How to extract text.</h3><br>
+1. Take all &quot;Map###&quot;
+files that saved in utf-8 and copy somewhere else (files that saved
+with different coding have to be processed separately - this is
+important!) 
+<br>
+2. Place
+merge_files.cmd in the same folder and launch it.<br>
+3. After program window
+closed, delete all Map files, rename &quot;outfile.json&quot; to
+&quot;maps1.json&quot; (name doesn't matter as long as you get it),
+and relocate it somewhere else.<br>
+4. Repeat the same with
+left Map files that weren't saved in utf-8, and rename  
+&quot;outfile.json&quot;
+to &quot;maps2.json&quot;. You have to open them in Unicode (UTF-8)
+later.<br>
+<br>
+5. Open maps1.json in
+text editor, in my case using Word, and save as maps1.doc.<br>
+<SPAN LANG="en-US">6.
+Ctrl+H, replace all [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">},{</SPAN></SPAN><SPAN LANG="en-US">[/code]
+to [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #ffff00">},^p 
+{</SPAN></SPAN><SPAN LANG="en-US">[/code]
+(for non map files also use [code]</SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background: #ffff00">&quot;,&quot;</SPAN></SPAN><SPAN LANG="en-US"> 
+[/code]
+-&gt; [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;,^p&quot;</SPAN></SPAN><SPAN LANG="en-US">[/code])
+then switch to wildcards and replace all [code]</SPAN><SPAN LANG="en- 
+US"><SPAN STYLE="background:  
+#ffff00">&quot;data&quot;*&quot;events&quot;</SPAN></SPAN><SPAN LANG="en- 
+US">[/code]
+to [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;events&quot;</SPAN></SPAN><SPAN LANG="en-US">[/code].
+Don't forget to save from time to time.</SPAN><br>
+7. Look for the lines
+with Japanese text. In this case it's look like
+&quot;code&quot;:401,&quot;indent&quot;:0,&quot;parameters&quot;: 
+[&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">きゃあ！ 
+</SPAN></FONT>&quot;]},<br>
+<SPAN LANG="en-US">8.
+Switch to wildcards and search for all entries using
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;code&quot;:401,&quot;indent&quot;:?,&quot;parameters&quot;*,^ 
+13</SPAN></SPAN><SPAN LANG="en-US">[/code],
+then mark them with some color. Repeat the same with other lines.
+</SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #00ff00">(*1. see
+at the end of this readme)</SPAN></SPAN><br>
+<SPAN LANG="en-US">9.
+Search for [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;name&quot;*,</SPAN></SPAN><SPAN LANG="en-US">[/code]
+and all other entries you need. Don't forget to mark them with
+colors.</SPAN><br>
+<br>
+<SPAN LANG="en-US">10.
+Remove wildcards, then choose Format -&gt; Highlight two times, leave
+&quot;find&quot; blank and replace with [code]</SPAN><SPAN LANG="en- 
+US"><SPAN STYLE="background: #ffff00">^p</SPAN></SPAN><SPAN LANG="en-US"> 
+[/code]
+- this should remove all text that wasn't highlighted with  
+colors.</SPAN><br>
+<SPAN LANG="en-US">11.
+Use replacement [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p^p</SPAN></SPAN><SPAN LANG="en-US">[/code]
+to [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p</SPAN></SPAN><SPAN LANG="en-US">[/code]
+unstill you'll get solid wall of text. Remove highlight and  
+format.</SPAN><br>
+<SPAN LANG="en-US">12.
+Use wildcards and replace all
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;code&quot;:???,&quot;indent&quot;:?,&quot;parameters&quot;:\[ 
+</SPAN></SPAN><SPAN LANG="en-US">[/code]
+with nothing.</SPAN><br>
+<SPAN LANG="en-US">13.
+Clean up things like [code]</SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background:  
+#ffff00">&quot;name&quot;:&quot;&quot;,</SPAN></SPAN><SPAN LANG="en-US"> 
+[/code]
+or [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;name&quot;:&quot;EV001&quot;,</SPAN></SPAN><SPAN LANG="en- 
+US">[/code]
+and [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">]},</SPAN></SPAN><SPAN LANG="en-US">[/code]
+(use [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">]},^p</SPAN></SPAN><SPAN LANG="en-US">[/code]
+-&gt; [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p</SPAN></SPAN><SPAN LANG="en-US">[/code]),
+numbers at the beginning (use [code]</SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background: #ffff00">^p^#,</SPAN></SPAN><SPAN LANG="en-US">[/code]
+-&gt; [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p</SPAN></SPAN><SPAN LANG="en-US">[/code]),
+etc.</SPAN><br>
+14. In the end you
+should get solid wall of text that looks like this:<br>
+&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">ルーシアの現在 
+のレベル　</SPAN></FONT>\\v[71]&quot;<br>
+&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">しない 
+</SPAN></FONT>&quot;<br>
+&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">探索を終了す 
+る</SPAN></FONT>&quot;<br>
+&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">しない 
+</SPAN></FONT>&quot;<br>
+&quot;name&quot;:&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN  
+LANG="ja-JP">橋</SPAN></FONT>&quot;,<br>
+&quot;name&quot;:&quot;Chest1&quot;,<br>
+&quot;<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">通常レベルが 
+</SPAN></FONT>\\v[73]<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN  
+LANG="ja-JP">下がります</SPAN></FONT>&quot;<br>
+&quot;\\c[3]<FONT FACE="MS Mincho, ＭＳ 明朝, monospace"><SPAN LANG="ja-JP">ルー 
+シア</SPAN></FONT>\\c[0]&quot;<br>
+etc.<br>
+<br>
+<SPAN LANG="en-US">15.
+Open Excel, copy all text form Word into first column. </SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #00ff00">(*2
+see at the end of this readme)</SPAN></SPAN><br>
+16. Go to Data -&gt;
+Filter -&gt; Advanced Filter.<br>
+17. Check &quot;Unique
+records only&quot;.<br>
+18. Copy what you get
+first into Notepad then from there back into Word. Close Excel.<br>
+19. Clean up things you
+don't need to translate (&quot;name&quot;:&quot;Chest1&quot;, for
+example).<br>
+With this, you've made
+your default test file.<br>
+<br>
+<h3>b) How to translate
+(using googletrans as example).</h3><br>
+20. Open Excel, copy
+all text form default test file into first column.<br>
+21. Upload default test
+file into google translate.<br>
+<SPAN LANG="en-US">22.
+Paste translated text into Excel's second column. It should have
+matched length. If it don't, then you did something wrong. </SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #00ff00">(*3
+see at the end of this readme)</SPAN></SPAN><br>
+<br>
+<h3>c) How to make
+translation script.</h3><br>
+23. Copy text from both
+columns into Notepad, then from there into new Word document (you
+want to leave your default test file untouched, you'll need it).<br>
+<SPAN LANG="en-US">24.
+Ctrl+H and replace all [code]</SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background: #ffff00">&quot;
+&quot;</SPAN></SPAN><SPAN LANG="en-US">[/code] with [code]</SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #ffff00">'
+: '</SPAN></SPAN><SPAN LANG="en-US">[/code] then all [code]</SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #ffff00">^p&quot;</SPAN></SPAN><SPAN  
+LANG="en-US">[/code]
+with [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #ffff00">^p
+       '&quot;</SPAN></SPAN><SPAN LANG="en-US">[/code] and all
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;^p</SPAN></SPAN><SPAN LANG="en-US">[/code]
+with [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">&quot;',^p</SPAN></SPAN><SPAN LANG="en-US">[/code]
+and save it as maps1_translated.doc. In general all Japanese lines
+that will be replaced should start with </SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background: #00ffff">'</SPAN></SPAN><SPAN LANG="en-US">,
+have </SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #00ffff">' :
+'</SPAN></SPAN><SPAN LANG="en-US"> between Japanese and English, and
+all English lines that will replace them should end with </SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #00ffff">',</SPAN></SPAN><SPAN  
+LANG="en-US">.</SPAN><br>
+25. Copy all text from
+maps1_translated.doc into default_auto_trans.user.jc and install to
+browser.<br>
+<br>
+<h3>d) How to test script.</h3><br>
+26. Open
+test_script.hrml with Notepad and copy all text from your
+default_auto_trans.user.jc under &quot;alert(&quot;no  
+errors&quot;);&quot;.<br>
+27. Open
+test_script.hrml with browser. If you don't get &quot;no errors&quot;
+message then there's some errors that prevent script from working
+correctly.<br>
+28. Use some debug tool
+(Ctrl+Shift+K in Firefox, Ctrl+Shift+I in Opera, etc - you also may
+need to reload page) to find and fix all errors. For example &quot;I'll
+win&quot; should look like &quot;I\'ll win&quot;. You also can use
+this method to find script errors in some *.json files (it won't work
+with maps tough AFAIK).<br>
+29. Repeat until you'll
+get &quot;no errors&quot; message.<br>
+<br>
+<h3>e) How to replace
+words.</h3><br>
+30. After your script
+will be free of errors and running, copy some *.json file, open it
+with Word, and paste content from your default test file - maps1.doc.
+Name it maps1_test.json for example.<br>
+31. Drag
+maps1_test.json into browser and check for non-replaced lines
+(alternatively: copy all text from browser into maps1_test.json,
+remove all translated lines and save).<br>
+32. Fix non-replaced
+lines in script, reload page in browser, find all non-replaced lines,
+rinse and repeat - until all of them they replaced correctly.<br>
+33. After script start
+to replace all lines, drag Map001.json into browser, wait until it
+finished work (it may take some time, up to 20+ min in case of big
+file and slow PC), copy all text, open Map001.json with Word, replace
+all text and save. Repeat with other maps.<br>
+34. Check map code
+using http://gamestailer94.de/translator/ or RPG MAKER MV
+Translator.html - if map doesn't show anything at all, then there's
+some errors in that map.<br>
+<br>
+You now successfully
+replaced all Japanese text with your translation. Run a new game to
+test it.<br>
+<br>
+<h3>f) Other.</h3><br>
+<SPAN LANG="en-US">*1.
+You also want to find and highlight with color all [file_name.json]
+entries. Use wildcards and [code]</SPAN><SPAN LANG="en-US"><SPAN  
+STYLE="background: #ffff00">\[*json\]^13</SPAN></SPAN><SPAN LANG="en-US"> 
+[/code]
+to find them all then highlight with color.</SPAN><br>
+<br>
+<SPAN LANG="en-US">*2.
+ In case you're using RPG_Maker_MV_part_trans script or any similar
+script that translates MV games, you better to open that script, copy
+everything into word, use wildcards and find all Japanese lines using
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background: #ffff00">'*'
+: '</SPAN></SPAN><SPAN LANG="en-US">[/code]. Then copy all selected
+into new Word document, uncheck wildcards, find all [code]</SPAN><SPAN  
+LANG="en-US"><SPAN STYLE="background: #ffff00">^p'</SPAN></SPAN><SPAN  
+LANG="en-US">[/code]
+replace with [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p</SPAN></SPAN><SPAN LANG="en-US">[/code],
+then find [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">'
+: '^p</SPAN></SPAN><SPAN LANG="en-US">[/code] and replace with
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">^p</SPAN></SPAN><SPAN LANG="en-US">[/code].
+Paste everything into Excel's first column, and only </SPAN><SPAN LANG="en- 
+US"><I>then</I></SPAN><SPAN LANG="en-US">
+paste lines from your default test file </SPAN><SPAN LANG="en- 
+US"><I>under</I></SPAN><SPAN LANG="en-US">
+it (remember the number were it starts from). Then see 16. and 17.
+Copy your text from the number you remembered.</SPAN><br>
+This will remove all
+the duplicates that may already been translated. Also, place your
+script above all other similar scripts that translates MV games, thus
+it will work first.<br>
+<br>
+<br><SPAN LANG="en-US">*3.
+Better to paste translated text into Word and replace all
+[code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">'</SPAN></SPAN><SPAN LANG="en-US">[/code]
+with [code]</SPAN><SPAN LANG="en-US"><SPAN STYLE="background:  
+#ffff00">\'</SPAN></SPAN><SPAN LANG="en-US">[/code].
+It will save you a lot of troubles later.</SPAN><br><BR><BR>
+<b>The end</b><BR><BR><BR>
+</BODY>
+</HTML>
