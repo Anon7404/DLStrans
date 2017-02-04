@@ -76,7 +76,7 @@ You now successfully replaced all Japanese text with your translation. Run a new
 \*1. You also want to find and highlight with color all [file_name.json] entries. Use wildcards and <code>\[*json\]^13</code> to find them all then highlight with color.
 
 
-\*2.  In case you're using RPG_Maker_MV_part_trans script or any similar script that translates MV games, you better to open that script, copy everything into word, use wildcards and find all Japanese lines using <code>'*' : '</code>. Then copy all selected into new Word document, uncheck wildcards, find all <code>^p'</code> replace with <code>^p</code>, then find <code>' : '^p</code> and replace with <code>^p</code>. Paste everything into Excel's first column, and only *then* paste lines from your default test file *under* it (remember the number were it starts from). Then see 16. and 17. Copy your text from the number you remembered.
+\*2.  In case you're using RPG_Maker_MV_part_trans script or any similar script that translates MV games, you better to open that script, copy everything into word, use wildcards and find all Japanese lines using <code>'\*' : '</code>. Then copy all selected into new Word document, uncheck wildcards, find all <code>^p'</code> replace with <code>^p</code>, then find <code>' : '^p</code> and replace with <code>^p</code>. Paste everything into Excel's first column, and only *then* paste lines from your default test file *under* it (remember the number were it starts from). Then see 16. and 17. Copy your text from the number you remembered.
 
 This will remove all the duplicates that may already been translated. Also, place your script above all other similar scripts that translates MV games, thus it will work first.
 
