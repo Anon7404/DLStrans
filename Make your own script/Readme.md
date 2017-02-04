@@ -14,7 +14,7 @@ Hint: <code>use this expression</code>
 5. Open maps1.json in text editor, in my case using Word, and save as maps1.doc.
 6. Ctrl+H, replace all <code>},{</code> to <code>},^p{</code> (for non map files also use <code>","</code> -> <code>",^p"</code>) then switch to wildcards and replace all <code>"data"*"events"</code> to <code>"events"</code>. Don't forget to save from time to time.
 7. Look for the lines with Japanese text. In this case it's look like "code":401,"indent":0,"parameters":["きゃあ！"]},
-8. Switch to wildcards and search for all entries using <code>"code":401,"indent":?,"parameters"*,^13</code>, then mark them with some color. Repeat the same with other lines. <code>(*1 see at the end of this readme)</code>
+8. Switch to wildcards and search for all entries using <code>"code":401,"indent":?,"parameters"\*,^13</code>, then mark them with some color. Repeat the same with other lines. <code>(*1 see at the end of this readme)</code>
 9. Search for <code>"name"*,</code> and all other entries you need. Don't forget to mark them with colors.
 
 
@@ -50,19 +50,19 @@ With this, you've made your default test file.
 
 ### c) How to make translation script.
 23. Copy text from both columns into Notepad, then from there into new Word document (you want to leave your default test file untouched, you'll need it).
-24. Ctrl+H and replace all <code>" "</code> with <code>' : '</code> then all <code>^p"</code> with <code>^p        '"</code> and all <code>"^p</code> with <code>"',^p</code> and save it as maps1_translated.doc. In general all Japanese lines that will be replaced should start with ', have ' : ' between Japanese and English, and all English lines that will replace them should end with ',.
+24. Ctrl+H and replace all <code>" "</code> with <code>' : '</code> then all <code>^p"</code> with <code>^p        '"</code> and all <code>"^p</code> with <code>"',^p</code> and save it as maps1_translated.doc. In general all Japanese lines that will be replaced should start with <code>'</code>, have <code>' : '</code> between Japanese and English, and all English lines that will replace them should end with <code>',</code>.
 25. Copy all text from maps1_translated.doc into default_auto_trans.user.jc and install to browser.
 
 
 ### d) How to test script.
 26. Open test_script.hrml with Notepad and copy all text from your default_auto_trans.user.jc under "alert("no errors");".
 27. Open test_script.hrml with browser. If you don't get "no errors" message then there's some errors that prevent script from working correctly.
-28. Use some debug tool (Ctrl+Shift+K in Firefox, Ctrl+Shift+I in Opera, etc - you also may need to reload page) to find and fix all errors. For example "I'll win" should look like "I\'ll win". You also can use this method to find script errors in some *.json files (it won't work with maps tough AFAIK).
+28. Use some debug tool (Ctrl+Shift+K in Firefox, Ctrl+Shift+I in Opera, etc - you also may need to reload page) to find and fix all errors. For example "I'll win" should look like "I\'ll win". You also can use this method to find script errors in some \*.json files (it won't work with maps tough AFAIK).
 29. Repeat until you'll get "no errors" message.
 
 
 ### e) How to replace words.
-30. After your script will be free of errors and running, copy some *.json file, open it with Word, and paste content from your default test file - maps1.doc. Name it maps1_test.json for example.
+30. After your script will be free of errors and running, copy some \*.json file, open it with Word, and paste content from your default test file - maps1.doc. Name it maps1_test.json for example.
 31. Drag maps1_test.json into browser and check for non-replaced lines (alternatively: copy all text from browser into maps1_test.json, remove all translated lines and save).
 32. Fix non-replaced lines in script, reload page in browser, find all non-replaced lines, rinse and repeat - until all of them they replaced correctly.
 33. After script start to replace all lines, drag Map001.json into browser, wait until it finished work (it may take some time, up to 20+ min in case of big file and slow PC), copy all text, open Map001.json with Word, replace all text and save. Repeat with other maps.
