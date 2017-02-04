@@ -1,6 +1,6 @@
 ##How to make your own translation script for RPG Maker MV
 >
-Hint: <code>**use this expression**</code>
+Hint: <code>use this expression</code>
 
 
 ### a) How to extract text.
@@ -12,16 +12,16 @@ Hint: <code>**use this expression**</code>
 
 
 5. Open maps1.json in text editor, in my case using Word, and save as maps1.doc.
-6. Ctrl+H, replace all <code>**},{**</code> to <code>**},^p{**</code> (for non map files also use <code>**","**</code> -> <code>**",^p"**</code>) then switch to wildcards and replace all <code>**"data"*"events"**</code> to <code>**"events"**</code>. Don't forget to save from time to time.
+6. Ctrl+H, replace all <code>},{</code> to <code>},^p{</code> (for non map files also use <code>","</code> -> <code>",^p"</code>) then switch to wildcards and replace all <code>"data"*"events"</code> to <code>"events"</code>. Don't forget to save from time to time.
 7. Look for the lines with Japanese text. In this case it's look like "code":401,"indent":0,"parameters":["きゃあ！"]},
-8. Switch to wildcards and search for all entries using <code>**"code":401,"indent":?,"parameters"*,^13**</code>, then mark them with some color. Repeat the same with other lines. <code>(*1 see at the end of this readme)</code>
-9. Search for <code>**"name"*,**</code> and all other entries you need. Don't forget to mark them with colors.
+8. Switch to wildcards and search for all entries using <code>"code":401,"indent":?,"parameters"*,^13</code>, then mark them with some color. Repeat the same with other lines. <code>(*1 see at the end of this readme)</code>
+9. Search for <code>"name"*,</code> and all other entries you need. Don't forget to mark them with colors.
 
 
-10. Remove wildcards, then choose Format -> Highlight two times, leave "find" blank and replace with <code>**^p**</code> - this should remove all text that wasn't highlighted with colors.
-11. Use replacement <code>**^p^p**</code> to <code>**^p**</code> unstill you'll get solid wall of text. Remove highlight and format.
-12. Use wildcards and replace all <code>**"code":???,"indent":?,"parameters":\[**</code> with nothing.
-13. Clean up things like <code>**"name":"",**</code> or <code>**"name":"EV001",**</code> and <code>**]},**</code> (use <code>**]},^p**</code> -> <code>**^p**</code>), numbers at the beginning (use <code>**^p^#,**</code> -> <code>**^p**</code>), etc.
+10. Remove wildcards, then choose Format -> Highlight two times, leave "find" blank and replace with <code>^p</code> - this should remove all text that wasn't highlighted with colors.
+11. Use replacement <code>^p^p</code> to <code>^p</code> unstill you'll get solid wall of text. Remove highlight and format.
+12. Use wildcards and replace all <code>"code":???,"indent":?,"parameters":\[</code> with nothing.
+13. Clean up things like <code>"name":"",</code> or <code>"name":"EV001",</code> and <code>]},</code> (use <code>]},^p</code> -> <code>^p</code>), numbers at the beginning (use <code>^p^#,</code> -> <code>^p</code>), etc.
 14. In the end you should get solid wall of text that looks like this:
 <p>"ルーシアの現在のレベル　\\v[71]"<br>
 "しない"<br>
@@ -50,7 +50,7 @@ With this, you've made your default test file.
 
 ### c) How to make translation script.
 23. Copy text from both columns into Notepad, then from there into new Word document (you want to leave your default test file untouched, you'll need it).
-24. Ctrl+H and replace all <code>**" "**</code> with <code>**' : '**</code> then all <code>**^p"**</code> with <code>**^p        '"**</code> and all <code>**"^p**</code> with <code>**"',^p**</code> and save it as maps1_translated.doc. In general all Japanese lines that will be replaced should start with ', have ' : ' between Japanese and English, and all English lines that will replace them should end with ',.
+24. Ctrl+H and replace all <code>" "</code> with <code>' : '</code> then all <code>^p"</code> with <code>^p        '"</code> and all <code>"^p</code> with <code>"',^p</code> and save it as maps1_translated.doc. In general all Japanese lines that will be replaced should start with ', have ' : ' between Japanese and English, and all English lines that will replace them should end with ',.
 25. Copy all text from maps1_translated.doc into default_auto_trans.user.jc and install to browser.
 
 
@@ -73,14 +73,14 @@ You now successfully replaced all Japanese text with your translation. Run a new
 
 
 ### f) Other.
-\*1. You also want to find and highlight with color all [file_name.json] entries. Use wildcards and <code>**\[*json\]^13**</code> to find them all then highlight with color.
+\*1. You also want to find and highlight with color all [file_name.json] entries. Use wildcards and <code>\[*json\]^13</code> to find them all then highlight with color.
 
 
-\*2.  In case you're using RPG_Maker_MV_part_trans script or any similar script that translates MV games, you better to open that script, copy everything into word, use wildcards and find all Japanese lines using <code>**'*' : '**</code>. Then copy all selected into new Word document, uncheck wildcards, find all <code>**^p'**</code> replace with <code>**^p**</code>, then find <code>**' : '^p**</code> and replace with <code>**^p**</code>. Paste everything into Excel's first column, and only *then* paste lines from your default test file *under* it (remember the number were it starts from). Then see 16. and 17. Copy your text from the number you remembered.
+\*2.  In case you're using RPG_Maker_MV_part_trans script or any similar script that translates MV games, you better to open that script, copy everything into word, use wildcards and find all Japanese lines using <code>'*' : '</code>. Then copy all selected into new Word document, uncheck wildcards, find all <code>^p'</code> replace with <code>^p</code>, then find <code>' : '^p</code> and replace with <code>^p</code>. Paste everything into Excel's first column, and only *then* paste lines from your default test file *under* it (remember the number were it starts from). Then see 16. and 17. Copy your text from the number you remembered.
 
 This will remove all the duplicates that may already been translated. Also, place your script above all other similar scripts that translates MV games, thus it will work first.
 
 
-\*3. Better to paste translated text into Word and replace all <code>**'**</code> with <code>**\'**</code>. It will save you a lot of troubles later.
+\*3. Better to paste translated text into Word and replace all <code>'</code> with <code>\'</code>. It will save you a lot of troubles later.
 
 The end.
