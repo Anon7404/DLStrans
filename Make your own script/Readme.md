@@ -4,7 +4,8 @@ Hint: <code>use this expression</code>
 
 
 ### a) How to extract text.
-0. Backup "data" and "js" folders.
+* Backup "data" and "js" folders.
+
 1. Take all "Map###" files that saved in utf-8 and copy somewhere else (files that saved with different coding have to be processed separately - this is important!) 
 2. Place merge_files.cmd in the same folder and launch it.
 3. After program window closed, delete all Map files, rename "outfile.json" to "maps1.json" (name doesn't matter as long as you get it), and relocate it somewhere else.
