@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name           Japanese DLSite translation
 // @namespace      http://userscripts.org/users/23652
-// @description    Replaces Japanese interface text on DLSite
+// @description    Replaces Japanese text on DLSite
 // @include        http*://*.dlsite.com/*
 // @exclude        http*://*.dlsite.com/*eng*
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.1.5
+// @version        1.1.6
 // @license        http://creativecommons.org/licenses/by-nc-nd/3.0/us/
-// @downloadURL    https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
-// @updateURL      https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
+// @project page   https://github.com/Anon7404/DLStrans
+// @downloadURL    https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
+// @updateURL      https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
 // ==/UserScript==
 (function () {
     'use strict';
@@ -19,6 +20,17 @@
         NOTE: 
             You can use \\* to match actual asterisks instead of using it as a wildcard!
             The examples below show a wildcard in use and a regular asterisk replacement.
+
+            '/(?:^|\\W)word(?:\\W|$)/g' : 'word',
+            '/(?:^|\\s)word/g' : 'word',
+            '/(|\\s)word\\s/g' : 'word',
+            '/(\\W:|)word(:\\W|$)/g' : 'word',
+            '/\\bword\\b/g' : 'word',
+            '/\\bword/g' : 'word',
+            '/(:|^)word/g' : 'word',
+            '/(:|^)word(:|$)/g' : 'word',
+            '/(:|^)word(|| )(:|$)/g' : 'word ',
+
     */
 
     var words = {
@@ -51,11 +63,12 @@
         '18禁' : 'R18+',
         '作品形式' : 'Categories',
         'ファイル形式' : 'File Format',
-        '対応OS' : 'OS Platforms',
+        '/(:|^)対応OS(:|$)/g' : 'OS Platforms',
         'その他オプション' : 'Additional Options',
         'その他同人誌' : 'Other Doujins',
         'その他同人ソフト' : 'Other Doujin Soft',
         'その他ゲーム' : 'Other Games',
+        '/(:|^)マイジャンル登録(:|$)/g' : 'Add to My Tags',
         'マイジャンル' : 'My Tags',
         'サンプル' : 'Samples',
         'HTML版で表示' : 'Display in HTML format',
@@ -597,18 +610,22 @@
         '以上推奨' : ' or greater recommend',
         '相当以上' : ' or greater',
         '/(:|^)メモリ(:|$)/g' : 'Memory',
+        '/(:|^)空き容量/g' : 'Free spase ',
         'B以上の空き容量' : 'B or greater recommend',
         'B以上' : 'B or greater',
+        '/(:|^)解像度/g' : 'Resolution ',
+        '/\\b以上(:|$)/g' : ' or greater',
         '注意事項' : 'Notice',
-        '誤字脱字修正' : 'Correction: typos',
-        '不具合修正' : 'Correction: bugs/defects',
-        '内容追加' : 'Added content',
+        '/(:|^)誤字脱字修正(:|$)/g' : 'Correction: typos',
+        '/(:|^)不具合修正(:|$)/g' : 'Correction: bugs/defects',
+        '/(:|^)内容追加(:|$)/g' : 'Added content',
         '/(:|^)以上(:|$)/g' : '+',
         '/\\b以上導入環境推奨(:|$)/g' : '+',
         '/\\b以上 \/ /g' : '+ \/ ',
         '/(:|^)フリガナ(:|$)/g' : 'Furigana',
         'サークル ID' : 'Circle ID',
         'DLsite blogへ' : 'DLsite blog',
+        '/(:|^)メンバー(:|$)/g' : 'Members',
         'の同一シリーズ作品' : ' has other works in the same series',
         'シリーズ作品' : 'Works in series',
         '「クリックゲームシリーズ」シリーズ\（' : 'Click Game Series \(',
@@ -645,16 +662,19 @@
         'RTPが必要' : 'RTP required',
         'に対応している必要あり' : ' or greater',
         'B程度の空き容量' : 'B of free space',
-        '追加更新に関しましては予定事項となります。' : 'Version updates are planned for this product.',
-        'アップデートに関しましては予定事項となります。' : 'Version updates are planned for this product.',
-        'バージョンアップに関しましては予定事項となります。' : 'Version updates are planned for this product.',
-        'バグ修正等アップデートに関しましては予定事項となります。' : 'Bug fixes and version updates are planned for this product.',
+        '/(||追加更新||更新||アップデート||バージョンアップ)に関しましては予定事項となります。/g' : 'Version updates are planned for this product.',
+        '/(||バグ修正等アップデート)に関しましては予定事項となります。/g' : 'Bug fixes and version updates are planned for this product.',
         'ディーエルサイトコムがこれを保証するものではありません。' : 'Please be aware that DLsite does not guarantee',
         '現段階の作品内容にご了承を頂いた上でご購入下さい。' : 'version updates or the contents thereof.',
         '/(:|^)◆更新履歴◆(:|$)/g' : 'Change Log',
         '/(:|^)閲覧可能な環境(:|$)/g' : 'Compatible Devices',
         '/(:|^)ダウンロードして閲覧(:|$)/g' : 'Download and view',
         '/(:|^)ブラウザで閲覧(:|$)/g' : 'Stream in browser',
+        '/(:|^)ダウンロード(:|$)/g' : 'Download',
+        '/(:|^)ブラウザ/g' : 'Stream',
+        '/視聴(:|$)/g' : '',
+        '/(:|^)の対応バージョン(:|$)/g' : ' compatible version(s)',
+        '/(:|^)すべての対応OSを表示する(:|$)/g' : 'View All OS Platforms',
         '/(:|^)販売作品(:|$)/g' : 'Releases',
         'この作品を買った人はこんな作品も買っています' : 'People who bought this item also bought',
         'こちらの作品も見られています' : 'Viewers of this item also viewed',
@@ -662,7 +682,7 @@
         'レビュアーに多く選ばれたジャンル' : 'Tags the reviewers selected',
         'レビュアーが選んだジャンル' : 'Tags the reviewer selected',
         'レビュー数 \: ' : 'User reviews\:',
-        '内容一部削除' : 'Partial deletion of contents',
+        '/(:|^)内容一部削除(:|$)/g' : 'Partial deletion of contents',
         '/(:|^)シリーズもの(|| )(:|$)/g' : 'Serial ',
         '/着せ替え(:|$)/g' : 'Clothes Change',
         '/(:|^)専用ビューア(:|$)/g' : 'Special Viewer',
@@ -676,8 +696,21 @@
         '/\\b月上旬/g' : ' Early',
         '/\\b月中旬/g' : ' Middle',
         '/\\b月下旬/g' : ' Late',
-        //'' : '',
-        //'' : '',
+        '/(:|^)未定/g' : 'TBA',
+        'バージョンアップ履歴をもっと見る' : 'See more...',
+        '/(:|^)体験版ダウンロード(:|$)/g' : 'Try Free Demo',
+        '\%還元' : '\% back',
+        '/(:|^)ポイント(:|$)/g' : 'Points',
+        '/(:|^)価格(:|$)/g' : 'Price',
+        '/(:|^)あたらしい画像ビューワーはいかがですか？(:|$)/g' : 'How do you like the new sample viewer?',
+        '/(:|^)評価する(:|$)/g' : 'Rate',
+        '/(:|^)画像ビューワーの評価(:|$)/g' : 'Rate the sample viewer',
+        '新しい画像ビューワーの使い心地はいかがですか？' : 'How would you rate the usability of the new sample viewer?',
+        '今後の改修の参考のためにも、以下より5段階で評価していただけますと幸いです。' : 'Your feedback is highly appreciated. Please rate it on the 5-star scale.',
+        '/(:|^)全/g' : '',
+        '/枚(:|$)/g' : ' images',
+        '/(:|^)お気に入りに入れる(:|$)/g' : 'Add to My Favorite',
+        '/(:||\\n)総計/g' : 'Total size:',
         //'' : '',
         //'' : '',
         //'' : '',
