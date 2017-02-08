@@ -6,11 +6,11 @@
 // @exclude        http*://*.dlsite.com/*eng*
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.1.7
+// @version        1.1.6
 // @license        http://creativecommons.org/licenses/by-nc-nd/3.0/us/
 // @project page   https://github.com/Anon7404/DLStrans
-// @downloadURL    https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
-// @updateURL      https://github.com/Anon7404/DLStrans/raw/master/Japanese%20DLSite%20translation.user.js
+// @downloadURL    https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
+// @updateURL      https://raw.github.com/Anon7404/DLStrans/master/Japanese_DLSite_translation.user.js
 // ==/UserScript==
 (function () {
     'use strict';
