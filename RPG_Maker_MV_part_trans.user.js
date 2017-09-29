@@ -5,7 +5,7 @@
 // @include        file://localhost/*/*.json
 // @grant          none
 // @copyright      JoeSimmons
-// @version        1.2
+// @version        1.2.1
 // @project page   https://github.com/Anon7404/DLStrans/tree/MV-partial-translation
 // @downloadURL    https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
 // @updateURL      https://raw.github.com/Anon7404/DLStrans/MV-partial-translation/RPG_Maker_MV_part_trans.user.js
@@ -323,7 +323,7 @@
         '"name"\:"ミミック"' : '"name"\:"Mimic"',
         '"name"\:"オーク"' : '"name"\:"Orc"',
 // other original
-        '"name"\:"ミノタウロス' : '"name"\:"Minotaur"',
+        '"name"\:"ミノタウロス"' : '"name"\:"Minotaur"',
 // non-original
         '"name"\:"こうもり"' : '"name"\:"Bat"',
         '"name"\:"エキドナ"' : '"name"\:"Echidna"',
@@ -946,28 +946,28 @@
          '"currencyUnit"\:"円"' : '"currencyUnit"\:"Yen"',
 //       '' : '',
 // [Troops.json]
-        '"name"\:"スライム\*2"' : '"name"\:"Slime\*2"',
-        '"name"\:"ホーネット\*2"' : '"name"\:"Hornet\*2"',
-        '"name"\:"ホーネット\*2　プラント"' : '"name"\:"Hornet\*2　Demon Plant"',
-        '"name"\:"プラント\*2"' : '"name"\:"Demon Plant\*2"',
-        '"name"\:"キラーラット\*3"' : '"name"\:"Killer Rat\*3"',
-        '"name"\:"バット\*2"' : '"name"\:"Bat\*2"',
-        '"name"\:"スパイダー\*3"' : '"name"\:"Spider\*3"',
-        '"name"\:"スネイク\*2"' : '"name"\:"Snake\*2"',
-        '"name"\:"バット\*2　スネイク"' : '"name"\:"Bat\*2　Snake"',
-        '"name"\:"インプ\*3"' : '"name"\:"Imp\*3"',
-        '"name"\:"バット\*2　インプ"' : '"name"\:"Bat\*2　Imp"',
-        '"name"\:"盗賊\*3"' : '"name"\:"Bandit\*3"',
-        '"name"\:"オーク\*2"' : '"name"\:"Orc\*2"',
+        '"name"\:"スライム\\*2"' : '"name"\:"Slime\*2"',
+        '"name"\:"ホーネット\\*2"' : '"name"\:"Hornet\*2"',
+        '"name"\:"ホーネット\\*2　プラント"' : '"name"\:"Hornet\*2　Demon Plant"',
+        '"name"\:"プラント\\*2"' : '"name"\:"Demon Plant\*2"',
+        '"name"\:"キラーラット\\*3"' : '"name"\:"Killer Rat\*3"',
+        '"name"\:"バット\\*2"' : '"name"\:"Bat\*2"',
+        '"name"\:"スパイダー\\*3"' : '"name"\:"Spider\*3"',
+        '"name"\:"スネイク\\*2"' : '"name"\:"Snake\*2"',
+        '"name"\:"バット\\*2　スネイク"' : '"name"\:"Bat\*2　Snake"',
+        '"name"\:"インプ\\*3"' : '"name"\:"Imp\*3"',
+        '"name"\:"バット\\*2　インプ"' : '"name"\:"Bat\*2　Imp"',
+        '"name"\:"盗賊\\*3"' : '"name"\:"Bandit\*3"',
+        '"name"\:"オーク\\*2"' : '"name"\:"Orc\*2"',
 // non-original
-        '"name"\:"こうもり\*2"' : '"name"\:"Bat\*2"',
-        '"name"\:"こうもり\*3"' : '"name"\:"Bat\*3"',
-        '"name"\:"ミノタウロス\*2"' : '"name"\:"Minotaur\*2"',
-        '"name"\:"ミノタウロス\*3"' : '"name"\:"Minotaur\*3"',
-        '"name"\:"エキドナ\*2"' : '"name"\:"Echidna\*2"',
-        '"name"\:"エキドナ\*3"' : '"name"\:"Echidna\*3"',
-        '"name"\:"ハーピー\*2"' : '"name"\:"Harpy\*2"',
-        '"name"\:"ハーピー\*3"' : '"name"\:"Harpy\*3"',
+        '"name"\:"こうもり\\*2"' : '"name"\:"Bat\*2"',
+        '"name"\:"こうもり\\*3"' : '"name"\:"Bat\*3"',
+        '"name"\:"ミノタウロス\\*2"' : '"name"\:"Minotaur\*2"',
+        '"name"\:"ミノタウロス\\*3"' : '"name"\:"Minotaur\*3"',
+        '"name"\:"エキドナ\\*2"' : '"name"\:"Echidna\*2"',
+        '"name"\:"エキドナ\\*3"' : '"name"\:"Echidna\*3"',
+        '"name"\:"ハーピー\\*2"' : '"name"\:"Harpy\*2"',
+        '"name"\:"ハーピー\\*3"' : '"name"\:"Harpy\*3"',
 // [Weapons.json]
         '"【剣】軽くて扱いやすい刀身の短い剣。"' : '"\[Sword\] A light and easy-to-wield short-bladed sword."',
         '"軽くて扱いやすい刀身の短い剣。"' : '"A light and easy-to-wield short-bladed sword."',
