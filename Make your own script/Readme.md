@@ -58,7 +58,7 @@ With this, you've made your default test file.
 ### d) How to test script.
 26. Open test_script.hrml with Notepad and copy all text from your default_auto_trans.user.jc under "alert("no errors");".
 27. Open test_script.hrml with browser. If you don't get "no errors" message then there's some errors that prevent script from working correctly.
-28. Use some debug tool (Ctrl+Shift+K in Firefox, Ctrl+Shift+I in Opera, etc - you also may need to reload page) to find and fix all errors. For example "I'll win" should look like "I\'ll win". You also can use this method to find script errors in some \*.json files (it won't work with maps tough AFAIK).
+28. Use some debug tool (Ctrl+Shift+K in Firefox, Ctrl+Shift+I in Opera, etc - you also may need to reload page) to find and fix all errors. For example "I'll win" should look like "I\\'ll win". You also can use this method to find script errors in some \*.json files (it won't work with maps tough AFAIK).
 29. Repeat until you'll get "no errors" message.
 
 
